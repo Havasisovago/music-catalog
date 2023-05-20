@@ -9,17 +9,17 @@ public class Song {
 
     private Long id;
     private String title;
-    private String artist;
+    private String writer;
     private String album;
     private Genre genre;
 
     public Song() {
     }
 
-    public Song(Long id, String title, String artist, String album, Genre genre) {
+    public Song(Long id, String title, String writer, String album, Genre genre) {
         this.id = id;
         this.title = title;
-        this.artist = artist;
+        this.writer = writer;
         this.album = album;
         this.genre = genre;
     }
@@ -40,12 +40,12 @@ public class Song {
         this.title = title;
     }
 
-    public String getArtist() {
-        return artist;
+    public String getwriter() {
+        return writer;
     }
 
-    public void setArtist(String artist) {
-        this.artist = artist;
+    public void setwriter(String writer) {
+        this.writer = writer;
     }
 
     public String getAlbum() {
@@ -81,7 +81,7 @@ public class Song {
         if (!Objects.equals(title, song.title)) {
             return false;
         }
-        if (!Objects.equals(artist, song.artist)) {
+        if (!Objects.equals(writer, song.writer)) {
             return false;
         }
         if (!Objects.equals(album, song.album)) {
@@ -94,7 +94,7 @@ public class Song {
     public int hashCode() {
         int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (title != null ? title.hashCode() : 0);
-        result = 31 * result + (artist != null ? artist.hashCode() : 0);
+        result = 31 * result + (writer != null ? writer.hashCode() : 0);
         result = 31 * result + (album != null ? album.hashCode() : 0);
         result = 31 * result + (genre != null ? genre.hashCode() : 0);
         return result;
@@ -105,7 +105,7 @@ public class Song {
         return "Song{"
                 + "id=" + id
                 + ", title='" + title + '\''
-                + ", artist='" + artist + '\''
+                + ", writer='" + writer + '\''
                 + ", album='" + album + '\''
                 + ", genre=" + genre
                 + '}';

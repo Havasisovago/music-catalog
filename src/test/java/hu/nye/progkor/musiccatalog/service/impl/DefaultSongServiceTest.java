@@ -25,7 +25,7 @@ import hu.nye.progkor.musiccatalog.service.SongService;
 class DefaultSongServiceTest {
 
     private static final Long DUMMY_SONG_ID = 1L;
-    private static final Song DUMMY_SONG = new Song(DUMMY_SONG_ID, "title", "artist", "album", Genre.CLASSICAL);
+    private static final Song DUMMY_SONG = new Song(DUMMY_SONG_ID, "title", "writer", "album", Genre.CLASSICAL);
 
     @Mock
     private Repository<Song, Long> songRepository;
